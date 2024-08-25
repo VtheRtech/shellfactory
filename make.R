@@ -14,7 +14,9 @@ rix(
     c(
       "tidyverse",
       "targets",
-      "",
+      "fastmap@1.2.0",
+      "devtools",
+      "testthat",
       "tarchetypes",
       "rmarkdown",
       "openxlsx",
@@ -26,3 +28,4 @@ rix(
   project_path = "~/shellfactory/",
   overwrite = TRUE,
   print = TRUE
+)
