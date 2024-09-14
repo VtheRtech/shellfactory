@@ -21,8 +21,7 @@
 let
  pkgs = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/ae815cee91b417be55d43781eb4b73ae1ecc396c.tar.gz") {};
  
-  rpkgs = builtins.attrValues {
-    inherit (pkgs.rPackages) 
+  rpkgs = with pkgs.rPackages; [
       tidyverse
       targets
       devtools
@@ -30,9 +29,15 @@ let
       tarchetypes
       rmarkdown
       openxlsx
-      readxl;
-  };
-    
+      readxl
+      codetools # dependecy for rix
+      curl      # dependecy for rix
+      jsonlite  # dependecy for rix
+      sys       # dependecy for rix
+  ];
+
+
+  
   system_packages = builtins.attrValues {
     inherit (pkgs) 
       R

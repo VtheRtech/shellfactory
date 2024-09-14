@@ -9,12 +9,11 @@ library(rix)
 
 
 rix(
-  r_ver = "latest",
+  r_ver = "4.4.0",
   r_pkgs =
     c(
       "tidyverse",
       "targets",
-      "fastmap@1.2.0",
       "devtools",
       "testthat",
       "tarchetypes",
@@ -25,7 +24,7 @@ rix(
   system_pkgs = NULL,
   git_pkgs = NULL,
   ide = "rstudio",
-  project_path = "~/shellfactory/",
+  project_path = "~/shellfactory/shellcase1/",
   overwrite = TRUE,
   print = TRUE
 )
